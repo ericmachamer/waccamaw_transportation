@@ -1,0 +1,131 @@
+/* =================================================================================
+Footer
+================================================================================= */
+
+.footer {
+  @include clearfix();
+  padding-top: 94px;
+  margin-top: 6px;
+  padding-bottom: 50px;
+  background: #0b0b0b;
+  .footer-logo {
+    img {
+      max-width: 100%;
+    }
+  }
+  h3 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    color: $brand-primary;
+    @include media-breakpoint-down(sm) {
+      margin-top: 30px;
+    }
+  }
+  .phone {
+    &-col {
+      color: $white;
+      font-size: 2.4rem;
+      padding-top: 20px;
+      a {
+        color: $white;
+        &:hover {
+          color: $brand-primary;
+        }
+      }
+    }
+  }
+  .footer-logo {
+    display: block;
+  }
+  address {
+    font-size: 1.3rem;
+    line-height: normal;
+    color: $gray-700;
+  }
+  .social-holder {
+    overflow: auto;
+    .social {
+      float: left;
+      margin-right: 10px;
+      a {
+        font-size: 2.5rem;
+        height: 52px;
+        width: 52px;
+        border-radius: 50%;
+        background: $white;
+        color: $black;
+        display: block;
+        position: relative;
+        margin-top: 25px;
+        i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-family: 'fontawesome';
+          font-style: normal;
+        }
+      }
+    }
+  }
+  .footer-copy-list {
+    display: inline-block;
+    overflow: auto;
+    margin-bottom: -6px;
+    margin-left: 5px;
+    font-size: 1.3rem;
+    li {
+      float: left;
+      &:first-child {
+        &:after {
+          content: '|';
+          display: inline-block;
+          margin: 0 5px;
+        }
+      }
+      a {
+        font-size: 1.3rem;
+        line-height: normal;
+        color: $gray-700;
+        text-decoration: underline;
+        &:hover {
+          color: $brand-primary;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .sub-footer {
+    padding-top: 100px;
+  }
+  .thee-line {
+    color: $gray-700;
+    font-size: 1.5rem;
+    text-align: right;
+    @include media-breakpoint-down(sm) {
+      text-align: left;
+    }
+    a {
+      color:  $gray-700;
+      &:hover {
+        color:  $gray-700;
+      }
+    }
+  }
+}
+
+.footer-menu-list {
+  margin-bottom: -20px;
+  li {
+    margin-bottom: 20px;
+    a {
+      color: $gray-500;
+      font-size: 1.7rem;
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+}

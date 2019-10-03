@@ -1,0 +1,58 @@
+.graphic-columns {
+  padding-top: 55px;
+  padding-bottom: 100px;
+  text-align: center;
+  h2 {
+    color: $black;
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .below-header {
+    color: $gray-400;
+    font-size: 2rem;
+  }
+  .columns {
+    margin-top: 55px;
+    .col {
+      border-right: 1px solid $gray-300;
+      &:hover {
+        cursor: pointer;
+        a {
+          color: $brand-primary;
+        }
+      }
+      &:last-child {
+        border: none;
+      }
+      @include media-breakpoint-down(md) {
+        border: none;
+        margin-top: 50px;
+        &:nth-child(1), &:nth-child(2) {
+          margin-top: 0;
+        }
+        &:nth-child(odd) {
+          border-right: 1px solid $gray-300;
+        }
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+    .icons {
+      img {
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+      }
+    }
+    a {
+      display: inline-block;
+      color: $black;
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-top: 25px;
+    }
+  }
+}

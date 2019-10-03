@@ -1,0 +1,71 @@
+.header-hero {
+    background-attachment: fixed;
+    @include media-breakpoint-down(lg) {
+        background-position: top center;
+    }
+    > .container {
+        .row {
+            min-height: 100vh;
+        }
+    }
+    h1 {
+        color: $white;
+        font-size: 7rem;
+        line-height: normal;
+        font-weight: 700;
+        margin-bottom: 20px;
+        @include media-breakpoint-up(xl) {
+            max-width: 60%;
+        }
+        .Explorer & {
+            padding-top: 250px;
+        }
+        @include media-breakpoint-down(lg) {
+            font-size: 6.5rem;
+            line-height: 7rem;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: 4rem;
+            line-height: 4.5rem;
+            body:not(.home) {
+                text-align: center;
+            }
+        }
+    }
+    h2 {
+        color: $white;
+        font-family: $font-family-sans-serif-regular;
+        font-weight: 800;
+        font-size: 3.1rem;
+        line-height: 4.8rem;
+        margin-bottom: 30px;
+    }
+    .btn {
+        font-size: 1.7rem;
+    }
+    .scroll-banner {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba($black, .7);
+        padding: 12px 0;
+        a {
+            font-size: 1.7rem;
+            color: $white;
+            &:before {
+                content: '';
+                display: inline-block;
+                position: relative;
+                top: 5px;
+                margin-right: 8px;
+                width: 14px;
+                height: 23px;
+                background: url(../images/scroll.png) center no-repeat;
+                @include media-breakpoint-down(sm) {
+                    background-image: url(../images/finger-down.png);
+                }
+            }
+        }
+    }
+}

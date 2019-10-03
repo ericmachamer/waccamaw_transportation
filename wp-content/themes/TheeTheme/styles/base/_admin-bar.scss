@@ -1,0 +1,84 @@
+#wpadminbar {
+    display: none;
+    @include media-breakpoint-up(md) {
+        display: block;
+        max-width: 25%;
+        min-width: unset;
+        height: auto;
+        top: auto;
+        bottom: 0;
+        padding-bottom: 50px;
+        background: none;
+        width: 50px;
+        background: rgba($black, .6);
+        border-radius: 0 25% 0 0;
+        &:hover {
+            width: 250px;
+            background: none;
+            border-radius: 0;
+            .quicklinks {
+                li {
+                    display: block;
+                }
+            }
+        }
+        #wp-admin-bar-wp-logo {
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            a {
+                height: 35px;
+                width: 35px;
+            }
+            .ab-item {
+                background: none !important;
+            }
+            .ab-icon {
+                font-size: 3.5rem !important;
+            }
+            div {
+                display: none !important;
+            }
+        }
+        .quicklinks {
+            ul {
+                position: unset;
+                &.ab-top-menu {
+                    background: #23282d;
+                }
+                &.ab-top-secondary {
+                    float: none;
+                    > li {
+                        float: none
+                    }
+                }
+                li {
+                    display: none;
+                    float: none;
+                    position: relative;
+                    &#wp-admin-bar-wp-logo {
+                        display: block;
+                    }
+                    &.menupop .ab-sub-wrapper,
+                    .shortlink-input {
+                        top: 0;
+                        left: 100%;
+                        div {
+                            left: auto;
+                        }
+                    }
+                }
+                &#wp-admin-bar-top-secondary {
+                    li {
+                        &.menupop .ab-sub-wrapper,
+                        .shortlink-input {
+                            top: auto;
+                            bottom: 0;
+                            left: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

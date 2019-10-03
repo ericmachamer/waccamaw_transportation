@@ -1,0 +1,83 @@
+/* =================================================================================
+Variables
+================================================================================= */
+
+// Colors
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$brand-primary: #dc1921;
+$brand-secondary: #242021;
+$brand-success: #B2DBBF;
+$brand-info: #F3FFBD;
+$brand-warning: #f0ad4e;
+$brand-danger: #FF1654;
+
+$color-facebook: #3B5998;
+$color-twitter: #33CCFF;
+$color-google: #000000;
+$color-linkedin: #4875B4;
+$color-email: #ec0501;
+
+// Layout
+$grid-gutter-width: 30px;
+
+// Typography
+$font-family-sans-serif-light: 'chivolight', sans-serif;
+$font-family-sans-serif-regular: 'chivoregular', sans-serif;
+$font-family-sans-serif-bold: 'chivobold', sans-serif;
+$font-family-serif: serif;
+$font-family-icon: 'FontAwesome';
+$font-family-monospace: Monaco, Consolas, 'Courier New', monospace;
+$font-family-base: $font-family-sans-serif-regular;
+$font-size-base: 1.6rem;
+
+// Z-Index
+$zindex-1: 1010;
+$zindex-2: 1020;
+$zindex-3: 1030;
+$zindex-4: 1040;
+$zindex-5: 1050;
+$zindex-6: 1060;
+$zindex-7: 1070;
+$zindex-8: 1080;
+$zindex-9: 1090;
+
+// Transitions
+$transition-200: all 200ms ease;
+$transition-300: all 300ms ease;
+
+$theme-colors: (
+        "primary":    $brand-primary,
+        "secondary":  $brand-secondary,
+        "success":    $brand-success,
+        "info":       $brand-info,
+        "warning":    $brand-warning,
+        "danger":     $brand-danger,
+        "light":      $gray-100,
+        "dark":       $gray-900
+);
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 480px,
+        md: 768px,
+        lg: 1024px,
+        xl: 1320px
+);
+
+$container-max-widths: (
+        sm: 420px,
+        md: 720px,
+        lg: 960px,
+        xl: 1240px
+);

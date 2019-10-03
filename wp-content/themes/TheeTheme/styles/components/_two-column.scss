@@ -1,0 +1,94 @@
+.row {
+  &.images {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  .col {
+    position: relative;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: center;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    &.dark {
+      &:after {
+        background-color: rgba($black, .85);
+      }
+    }
+    &.light {
+      &:after {
+        background-color: rgba($black, .5);
+      }
+    }
+  }
+}
+.two-column-holder {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @include media-breakpoint-down(sm) {
+    background: $brand-secondary;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  h2 {
+    font-size: 4rem;
+    color: $white;
+    font-weight: 700;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 184px;
+      height: 1px;
+      background: $gray-800;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 1px;
+      background: $brand-primary;
+    }
+  }
+  h3 {
+    font-size: 2rem;
+    color: $white;
+    padding-top: 15px;
+  }
+  .content-holder {
+    color: $white;
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+  }
+  .btn {
+    margin-top: 30px;
+  }
+}

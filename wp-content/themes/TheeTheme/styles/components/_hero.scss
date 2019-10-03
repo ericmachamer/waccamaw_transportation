@@ -1,0 +1,34 @@
+.header-hero-internal {
+    background-size: cover;
+    .header-hero-container {
+        height: 558px;
+        position: relative;
+        .row {
+            height: 100%;
+            .hero-headline-holder {
+                position: absolute;
+                top: calc(50% + 50px);
+                transform: translateY(-50%);
+                left: 0;
+                right: 0;
+                text-align: center;
+                text-shadow: 0 0 10px rgba($black, .8);
+                .hero-headline {
+                    color: $white;
+                    font-size: 7.5rem;
+                    @include media-breakpoint-down(sm) {
+                        font-size: 4rem;
+                    }
+                    &-sub {
+                        color: $white;
+                        font-size: 3.1rem;
+                        margin-top: 15px;
+                        @include media-breakpoint-down(sm) {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,173 @@
+/* =================================================================================
+Sidebar
+================================================================================= */
+
+.sidebar-widget {
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.widget_text {
+    .textwidget {
+      @extend .composition;
+    }
+  }
+}
+.sidebar-menu {
+  position: relative;
+  margin-top: -86px;
+  left: 0;
+  right: 0;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  &-holder {
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 52px;
+      right: -9px;
+      bottom: -9px;
+      left: 9px;
+      background: url(../images/gray-diag.jpg);
+    }
+  }
+  &-header {
+    color: $white;
+    background: $gray-500;
+    font-size: 1.8rem;
+    padding: 16px 37px;
+    position: relative;
+    a {
+      color: $white;
+      transition: $transition-300;
+      &:hover {
+        color: $brand-primary
+      }
+    }
+  }
+  .menu-holder {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    padding: 15px 0;
+    background: $white;
+    &:before {
+      content: '';
+      display: block;
+      width: 25px;
+      height: 25px;
+      background: $gray-500;
+      position: absolute;
+      top: -13px;
+      left: -13px;
+      transform: rotate(45deg);
+    }
+  }
+  .child-menu {
+    background: $white;
+    padding: 15px 0 15px 37px;
+    li {
+      border-bottom: solid 1px $gray-300;
+      &:last-child {
+        border: none;
+      }
+      h3 {
+        font-size: 2.2rem;
+        a {
+          color: $brand-primary;
+        }
+      }
+      a {
+        font-size: 1.8rem;
+        color: $gray-600;
+        padding: 10px 25px 10px 0;
+        display: block;
+        &:hover {
+          background: url(../images/sidebar-arrow.png) no-repeat center right 15px;
+          color: $brand-primary;
+        }
+      }
+      &.current-cat,
+      &.current_page_item {
+        a {
+          color: $black;
+          background: url(../images/sidebar-arrow.png) no-repeat center right 15px;
+        }
+      }
+      a.active {
+        color: $black;
+        background: url(../images/sidebar-arrow.png) no-repeat center right 15px;
+      }
+    }
+  }
+}
+.sidebar-headshot {
+  position: relative;
+  padding-top: 15px;
+  background: $white;
+  margin-bottom: 45px;
+  img {
+    display: inline-block;
+  }
+}
+
+.sidebar-ad {
+  margin-top: 45px;
+  position: relative;
+  z-index: 10;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 9px;
+    right: -9px;
+    bottom: -9px;
+    left: 9px;
+    background: url(../images/gray-diag.jpg);
+  }
+  &-holder {
+    position: relative;
+    padding: 42px 0 0;
+    .icon {
+      padding-bottom: 5px;
+      img {
+        display: inline-block;
+      }
+    }
+    .text {
+      padding: 0 35px 25px;
+      h3 {
+        color: $white;
+      }
+      h6 {
+        color: $gray-200;
+        font-weight: 300;
+      }
+    }
+    .link {
+      background: $black url(../images/down-solid-arrow-red.png) no-repeat center top;
+      background-size: 14px 7px;
+      padding: 15px 25px;
+      a {
+        color: $white;
+        transition: $transition-300;
+        &:hover {
+          color: $brand-primary;
+        }
+        &:after {
+          content: '';
+          position: relative;
+          display: inline-block;
+          width: 8px;
+          height: 12px;
+          margin-left: 5px;
+          top: 0;
+          background: url(../images/btn-arrow.png) center no-repeat;
+        }
+      }
+    }
+  }
+}

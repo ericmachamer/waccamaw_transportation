@@ -1,0 +1,47 @@
+/* =================================================================================
+Search
+================================================================================= */
+
+.search-form {
+  @include clearfix();
+  display: block;
+  padding-bottom: 93px;
+  .screen-reader-text {
+    display: none;
+  }
+}
+
+.search-form input {
+  float: left;
+  height: 35px;
+  border: 1px solid $gray-300;
+  &[type='search'] {
+    width: 250px;
+  }
+  &[type='submit'] {
+    border-color: $brand-primary;
+  }
+}
+
+.search-form-box {
+  padding: 0 10px;
+}
+
+.search-form-submit {
+  background: $brand-primary;
+  border: 0 none;
+  color: #fff;
+}
+
+.posts-search {
+  .search-form {
+    padding-bottom: 20px;
+  }
+  .page-title {
+    padding-bottom: 35px;
+  }
+  .posts-list {
+    list-style: none;
+    padding-left: 0;
+  }
+}

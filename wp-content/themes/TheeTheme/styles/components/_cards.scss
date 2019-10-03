@@ -1,0 +1,136 @@
+.flip-cards {
+    padding: 97px 0;
+    @include media-breakpoint-down(sm) {
+        padding: 40px 0;
+    }
+    background: #f8f8f8;
+    .section-header {
+        h2 {
+            color: $black;
+            padding-bottom: 30px;
+            margin-bottom: 27px;
+            position: relative;
+            font-size: 5.6rem;
+            &:before {
+                content: '';
+                display: block;
+                height: 1px;
+                width: 184px;
+                background: $gray-400;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &:after {
+                content: '';
+                display: block;
+                height: 1px;
+                width: 50px;
+                background: $brand-primary;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .desc {
+            font-size: 2.1rem;
+            line-height: 3rem;
+            margin-bottom: 55px;
+        }
+    }
+    .items {
+        @include media-breakpoint-up(sm) {
+            margin: -20px;
+        }
+        .item {
+            .item-container {
+                position: relative;
+                height: 100%;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 9px;
+                    right: -9px;
+                    bottom: -9px;
+                    left: 9px;
+                    background: url(../images/gray-diag.jpg);
+                }
+                .item-bg {
+                    background: $white no-repeat center right -50px;
+                    position: relative;
+                    padding: 32px 37px;
+                    height: 100%;
+                    &:before {
+                        background: url(../images/cheveron.jpg) top center;
+                        content: '';
+                        display: block;
+                        position: relative;
+                        width: 53px;
+                        height: 46px;
+                        margin-bottom: 25px;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $brand-primary;
+                        color: $white;
+                        h3 {
+                            color: $white;
+                        }
+                        &:before {
+                            background-position: bottom center;
+                        }
+                        .more {
+                            &:before {
+                                background: $brand-secondary;
+                            }
+                        }
+                    }
+                    h3 {
+                        color: $brand-secondary;
+                        font-size: 2.2rem;
+                        margin-bottom: 22px;
+                    }
+                    .desc {
+                        font-size: 1.6rem;
+                        line-height: 2.5rem;
+                    }
+                    .more {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        height: 43px;
+                        width: 43px;
+                        overflow: hidden;
+                        &:before {
+                            content: '';
+                            display: block;
+                            background: $gray-300;
+                            position: absolute;
+                            height: 80px;
+                            width: 43px;
+                            transform: rotate(45deg);
+                            top: -9px;
+                            right: -20px;
+                        }
+                        &:after {
+                            content: '+';
+                            font-size: 2.2rem;
+                            color: $white;
+                            display: block;
+                            position: absolute;
+                            bottom: 2px;
+                            right: 7px;
+                            transition: $transition-200;
+                        }
+                    }
+                }
+            }
+            @include media-breakpoint-up(sm) {
+                padding: 20px;
+            }
+        }
+    }
+}

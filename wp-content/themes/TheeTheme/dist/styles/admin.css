@@ -1,0 +1,69 @@
+.js .tmce-active .wp-editor-area {
+  color: #000; }
+
+body.login {
+  position: relative;
+  min-height: 100%;
+  background: url("../images/login-bg.jpg") no-repeat center;
+  background-size: cover;
+  -webkit-background-size: cover; }
+  body.login #login {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ebebeb));
+    background-image: linear-gradient(#fff, #ebebeb);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 10%;
+    width: 375px;
+    margin: 0;
+    padding: 0;
+    -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); }
+    body.login #login h1 {
+      border-bottom: 1px solid #ddd; }
+      body.login #login h1 a {
+        width: 100%;
+        height: 100px;
+        margin: 0;
+        background: url("../images/theedigital-logo.png") no-repeat center; }
+    body.login #login form {
+      padding: 0 40px;
+      background: none;
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+      body.login #login form label {
+        color: #2c99ce; }
+    body.login #login p#nav, body.login #login p#backtoblog {
+      text-align: center;
+      margin-top: 0; }
+    body.login #login p.submit {
+      padding: 20px 0;
+      clear: both;
+      float: none;
+      text-align: center; }
+      body.login #login p.submit input[type=submit] {
+        margin: 0;
+        float: none;
+        width: 100%;
+        height: 50px;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        font-size: 22px;
+        text-shadow: none;
+        text-transform: uppercase;
+        border: 0;
+        background: #2c99ce;
+        border-radius: 25px; }
+        body.login #login p.submit input[type=submit]:hover, body.login #login p.submit input[type=submit]:active {
+          background-color: #2889b9; }
+    body.login #login footer {
+      padding: 20px;
+      text-align: center;
+      background: #cccccc; }
+      body.login #login footer a {
+        font-weight: 700;
+        color: #000; }
+        body.login #login footer a:hover {
+          text-decoration: underline; }

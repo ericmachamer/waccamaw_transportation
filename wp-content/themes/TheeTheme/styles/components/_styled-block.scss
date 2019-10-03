@@ -1,0 +1,108 @@
+.styled-block {
+    margin-bottom: 25px;
+    &-content {
+        background: $white;
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 9px;
+            right: -9px;
+            bottom: -9px;
+            left: 9px;
+            background: url(../images/gray-diag.jpg);
+        }
+        &-holder {
+            position: relative;
+            background: $white;
+            overflow: auto;
+            .content-holder {
+                padding-left: 30px;
+                float: left;
+                width: 55%;
+                &-full {
+                    width: 100%;
+                    padding: 15px;
+                    min-height: 168px;
+                    .post-image {
+                        margin: -15px 15px -15px -15px;
+                        background: center top;
+                    }
+                    h3 {
+                        margin-top: 0;
+                        margin-bottom: 15px;
+                        font-size: 2.2rem;
+                        padding-bottom: 10px;
+                        position: relative;
+                        @include media-breakpoint-down(lg) {
+                            font-size: 2rem;
+                        }
+                        &:after {
+                            content: '';
+                            height: 1px;
+                            width: 50px;
+                            display: block;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            background: $gray-400
+                        }
+                    }
+                }
+                .post-date {
+                    margin-bottom: 15px;
+                }
+                .read-more {
+                    float: right;
+                }
+            }
+            .name {
+                font-size: 2.2rem;
+                padding-bottom: 10px;
+                position: relative;
+                @include media-breakpoint-down(lg) {
+                    font-size: 2rem;
+                }
+                &:after {
+                    content: '';
+                    height: 1px;
+                    width: 50px;
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background: $gray-400
+                }
+            }
+            .position {
+                bottom: 25px;
+                position: absolute;
+                font-size: 1.7rem;
+                @include media-breakpoint-down(lg) {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    &-image {
+        height: 201px;
+        overflow: hidden;
+        position: relative;
+        float: left;
+        width: 45%;
+        background: $gray-600 center top;
+        background-size: cover;
+        &:after {
+            content: '';
+            background: $white;
+            display: block;
+            position: absolute;
+            bottom: -12px;
+            right: -12px;
+            height: 25px;
+            width: 25px;
+            transform: rotate(45deg);
+        }
+    }
+}

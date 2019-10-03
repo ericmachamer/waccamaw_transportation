@@ -1,0 +1,21 @@
+.team-holder {
+    padding-top: 70px;
+    .styled-block-content {
+        .styled-block-content-holder,
+        &:before {
+            transition: $transition-300;
+        }
+        &:hover {
+            &:before {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+            .styled-block-content-holder {
+                cursor: pointer;
+                background-color: lighten($brand-primary, 30%);
+            }
+        }
+    }
+}

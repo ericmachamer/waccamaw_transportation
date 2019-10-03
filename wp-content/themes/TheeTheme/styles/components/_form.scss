@@ -1,0 +1,88 @@
+/* =================================================================================
+Form
+================================================================================= */
+
+.form {
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+  }
+
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
+
+.main {
+  .gform_fields {
+    list-style: none;
+    padding: 0;
+  }
+}
+.gform_fields {
+  list-style: none;
+  margin: 0 -15px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    list-style: none;
+  }
+  .gfield {
+    margin-bottom: 20px;
+    label {
+      color: $black;
+      margin-bottom: 0;
+    }
+    input, textarea {
+      width: 100%;
+      border: 1px solid $gray-300;
+    }
+    &.gfield_error {
+      input, textarea {
+        border-color: $brand-primary;
+      }
+    }
+    input {
+      height: 50px;
+      padding: 0 15px;
+    }
+    textarea {
+      height: 135px;
+      padding: 15px;
+    }
+  }
+}
+input {
+  &[type='submit'] {
+    display: block;
+    margin: 0 auto;
+    height: 53px;
+    padding: 0 40px;
+    background: none;
+    border: 1px solid $brand-primary;
+    cursor: pointer;
+    transition: $transition-200;
+    &:hover {
+      background: darken($brand-primary, 10%);
+    }
+  }
+}
+.validation_error,
+.validation_message {
+  color: $brand-primary;
+}
+.validation_error {
+  margin-bottom: 25px;
+}
+.gform_confirmation_message {
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+}
+.gform_validation_container {
+  display: none;
+}

@@ -1,0 +1,50 @@
+.by-the-numbers-holder {
+    background: $white;
+    .page:not(.home) &,
+    .single & {
+        margin-top: 150px;
+    }
+}
+.by-the-numbers {
+    overflow: auto;
+    .btnum-holder {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .icon,
+        .btnum-text {
+            float: left;
+            @include media-breakpoint-down(sm) {
+                float: none;
+                text-align: center;
+            }
+        }
+        .icon {
+            padding-right: 18px;
+            @include media-breakpoint-down(sm) {
+                display: inline-block;
+                margin-bottom: 15px;
+                padding: 0;
+            }
+        }
+        .btnum-text {
+            p {
+                margin: 0;
+                font-size: 1.5rem;
+                color: $gray-500;
+                &.number {
+                    font-size: 3rem;
+                    line-height: 5rem;
+                    @include media-breakpoint-down(sm) {
+                        font-size: 3rem;
+                        line-height: 3.9rem;
+                    }
+                }
+            }
+        }
+    }
+}

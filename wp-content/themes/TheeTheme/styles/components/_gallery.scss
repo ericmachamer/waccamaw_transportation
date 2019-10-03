@@ -1,0 +1,46 @@
+.composition .wp-block-gallery {
+    list-style: none;
+    padding: 0;
+    @include make-row();
+    li {
+        @include make-col-ready();
+        @include make-col(4);
+        @include media-breakpoint-down(md) {
+            @include make-col(6);
+        }
+    }
+}
+.gallery {
+    h2 {
+        float: none;
+        font-size: 5.6rem;
+        font-weight: 500;
+        color: #242021;
+        padding: 50px 0 25px;
+        border-bottom: #ced4da solid 1px;
+        margin-bottom: 25px;
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 50px;
+            background: #dc1921;
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+        }
+    }
+    ul {
+        li {
+            .image-holder {
+                padding-top: 100%;
+                width: 100%;
+                background: no-repeat center;
+                background-size: cover;
+            }
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+}

@@ -1,0 +1,177 @@
+.timeline{
+  &-holder {
+    position: relative;
+    margin-top: 95px;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 15px;
+      background: $brand-primary;
+    }
+  }
+  &-element {
+    position: relative;
+    padding-bottom: 85px;
+    @include media-breakpoint-up(lg) {
+      &:nth-child(2) {
+        margin-top: 180px;
+      }
+    }
+    &-holder {
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 9px;
+        right: 7px;
+        bottom: -9px;
+        left: 24px;
+        background: url(../images/gray-diag.jpg);
+      }
+    }
+    &-image {
+      position: relative;
+    }
+    &-content {
+      background: $white;
+      padding: 0 50px 35px;
+      position: relative;
+      &--border {
+        position: absolute;
+        height: 45px;
+        top: -45px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        background: url(../images/timeline-border.png) no-repeat top left;
+        @include media-breakpoint-down(md) {
+          background: $white;
+          border-top: 6px solid $gray-400;
+        }
+        .odd & {
+          background: url(../images/timeline-border-right.png) no-repeat top right;
+          @include media-breakpoint-down(md) {
+            background: $white;
+            border-top: 6px solid $gray-400;
+          }
+        }
+      }
+      h4 {
+        margin: 0 0 5px;
+        font-size: 1.7rem;
+        color: $gray-500;
+        text-transform: uppercase;
+      }
+      h3 {
+        font-size: 3.6rem;
+        margin: 0 0 20px;
+        color: $brand-secondary;
+      }
+      .reveal {
+        overflow: hidden;
+        height: 70px;
+        position: relative;
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 63%,rgba(255,255,255,1) 100%);
+        }
+        &.show {
+          height: auto;
+          &:after {
+            display: none;
+          }
+        }
+        p {
+          font-size: 1.7rem;
+          line-height: 2.5rem;
+        }
+      }
+      .separator {
+        height: 3px;
+        width: 100%;
+        background: $gray-300;
+        margin-top: 20px;
+      }
+      .show-all {
+        display: inline-block;
+        margin-top: 25px;
+        color: $brand-primary;
+        font-size: 1.7rem;
+        text-decoration: none;
+        padding-right: 20px;
+        position: relative;
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          width: 12px;
+          background: url(../images/down-arrow-red.png) no-repeat center;
+        }
+        &.shown {
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+        &:hover {
+          color: $brand-secondary;
+        }
+      }
+    }
+  }
+  &-date {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin: 70px 0;
+    padding: 0;
+    @include media-breakpoint-down(md) {
+      height: 150px;
+      width: 150px;
+      margin: 0;
+      top: -15px;
+      left: auto;
+      right: -15px;
+      transform: translateX(0);
+    }
+    .odd & {
+      left: 0;
+      @include media-breakpoint-down(md) {
+        left: -15px;
+        right: auto;
+      }
+    }
+    &-circle {
+      width: 100%;
+      padding-top: calc(100% - 15px);
+      background: $brand-primary;
+      position: relative;
+      border-radius: 50%;
+      border: 7px solid #f8f8f8;
+      &-text {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        color: $white;
+        font-size: 2.1rem;
+      }
+    }
+  }
+}

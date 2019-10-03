@@ -1,0 +1,28 @@
+/**
+ * Variables
+ */
+@import "../base/_variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/* Utilities
+ */
+@import "../utilities/_mixins";
+@import "../utilities/_helpers";
+/**
+ * Base - global styles and variables
+ */
+@import "../base/_fonts";
+@import "../base/_global";
+/**
+ * Components - reusable components
+ */
+@import "../components/_button";
+@import "../components/_composition";
+
+body, body.wp-autoresize {
+  @extend .composition;
+  padding-top: 10px !important;
+  padding-right: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 10px !important;
+}

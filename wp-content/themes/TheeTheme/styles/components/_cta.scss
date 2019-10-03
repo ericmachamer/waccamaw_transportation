@@ -1,0 +1,55 @@
+.cta.bg-block {
+    margin-bottom: -35px;
+  form {
+    position: relative;
+    .validation_error {
+      position: absolute;
+      bottom: 100%;
+      color: $brand-secondary;
+      width: 100%;
+    }
+    .validation_message {
+      color: $brand-secondary;
+      position: absolute;
+      top: 100%;
+      padding-top: 10px;
+      width: 100%;
+    }
+    .gform_fields {
+      li {
+        padding: 0;
+          position: relative;
+          label {
+              position: absolute;
+              top: 50%;
+              left: 15px;
+              transform: translateY(-50%);
+          }
+          &.active {
+              label {
+                  display: none;
+              }
+          }
+      }
+
+    }
+    .gform_footer {
+        position: relative;
+        top: auto;
+        right: auto;
+        input[type=submit] {
+          padding: 15px 50px;
+          font-size: 1.6rem;
+          font-weight: 700;
+          transition: $transition-200;
+          background: $brand-secondary url(../images/btn-arrow.png) center right 30px no-repeat;
+          text-decoration: none !important;
+          border: none;
+          color: $white;
+          &:hover {
+            background-color: $black;
+          }
+        }
+    }
+  }
+}
